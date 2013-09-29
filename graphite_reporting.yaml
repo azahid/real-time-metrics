@@ -1,0 +1,13 @@
+log.file: test.log
+log.file.date.format: "%m/%d/%Y %H:%M:%S"
+log.debug.enabled: false
+
+reporting.tool: graphite
+graphite.server: 10.14.208.154
+graphite.port: 2003
+
+reporting:
+    - filterRegex: (.*) INFO.*([0-9]{3}) (GET|PUT|DELETE|POST) /api/health.*
+      pattern: ss.health.page.{0[1]}.{0[2]}
+      date: "{0[0]}"
+      uniqueName: HealthPageStatus
