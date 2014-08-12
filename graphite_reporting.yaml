@@ -3,7 +3,7 @@ log.file.date.format: "%m/%d/%Y %H:%M:%S"
 log.debug.enabled: false
 
 reporting.tool: graphite
-graphite.server: 10.14.208.154
+graphite.server: 192.168.1.X
 graphite.port: 2003
 
 reporting:
